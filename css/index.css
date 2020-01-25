@@ -1138,6 +1138,32 @@ td {
   margin: 0.5rem 0 0;
   font-weight: 600;
 }
+.sidebar-ov-social {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.sidebar-ov-social__item {
+  display: inline-block;
+  margin: 0.2rem;
+  text-align: center;
+  color: var(--color-gray-100);
+  background-color: #a0daff;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+.sidebar-ov-social__item:hover {
+  color: var(--color-gray-100);
+  background-color: #4dbaff;
+}
+.sidebar-ov-social__item--icon {
+  font-size: 1.2em;
+}
 .sidebar-ov-state {
   padding: 0.5rem 0;
   text-align: center;
