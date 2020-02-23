@@ -13,14 +13,16 @@ $(document).ready(function () {
   Stun.utils.pjaxReloadBoot = function () {
     if (CONFIG.codeblock) {
       var codeStyle = CONFIG.codeblock.style;
-
       if (codeStyle === 'default') {
         this.addCodeHeader();
         this.addCopyButton();
-        this.registerCopyEvent();
       } else if (codeStyle === 'carbon') {
         this.addCodeHeader('carbon');
+        this.addCopyButton('carbon');
+      } else if (codeStyle === 'simple') {
+        this.addCopyButton('simple');
       }
+      this.registerCopyEvent();
     }
     if (CONFIG.reward) {
       this.registerShowReward();
@@ -32,13 +34,13 @@ $(document).ready(function () {
       this.showImageToWaterfall();
     }
     if (CONFIG.external_link) {
-      var CONTAINER = '.archive, .post-header-title';
+      var CONTAINER = '.archive, .post-title';
       this.addIconToExternalLink(CONTAINER);
     }
     if (CONFIG.fancybox) {
       this.wrapImageWithFancyBox();
     } else if (CONFIG.zoom_image) {
-      this.registerClickToZoomImage();
+      this.registerZoomImage();
     }
   };
 
